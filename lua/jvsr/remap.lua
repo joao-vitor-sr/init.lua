@@ -35,3 +35,6 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 
 vim.keymap.set("i", "<C-[>", "<Esc>")
+
+vim.keymap.set("n", "<leader>dc", '<cmd>!compiler "%:p"<CR>')
+vim.keymap.set("n", "<leader>dp", '<cmd>!opout "%:p"<CR>')
