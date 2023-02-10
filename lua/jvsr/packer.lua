@@ -7,8 +7,9 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  use { "nvim-telescope/telescope-file-browser.nvim" }
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim',
     -- or                            , branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
@@ -43,6 +44,10 @@ return require('packer').startup(function(use)
       -- Snippets
       { 'L3MON4D3/LuaSnip' },
       { 'rafamadriz/friendly-snippets' },
+
+      -- Formatter and lint
+      { 'jose-elias-alvarez/null-ls.nvim' },
+      { 'jay-babu/mason-null-ls.nvim' }
     }
   }
 
