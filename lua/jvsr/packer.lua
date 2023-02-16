@@ -7,7 +7,6 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  use { "nvim-telescope/telescope-file-browser.nvim" }
   use {
     'nvim-telescope/telescope.nvim',
     -- or                            , branch = '0.1.x',
@@ -15,7 +14,13 @@ return require('packer').startup(function(use)
   }
 
   use('luisiacc/gruvbox-baby')
-
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('nvim-treesitter/nvim-treesitter-context')
   use('nvim-treesitter/playground')
@@ -50,5 +55,4 @@ return require('packer').startup(function(use)
       { 'jay-babu/mason-null-ls.nvim' }
     }
   }
-
 end)
