@@ -40,4 +40,4 @@ vim.keymap.set("n", "<leader>dp", '<cmd>!opout "%:p"<CR>')
 
 vim.keymap.set("n", "H", "^")
 vim.keymap.set("n", "L", "$")
-vim.keymap.set("i", "jk", "<Esc><CR>")
+vim.keymap.set("i", "jk", "<Esc>")
