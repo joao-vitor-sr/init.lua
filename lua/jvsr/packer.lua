@@ -13,6 +13,11 @@ return require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
+  use {
+    'karb94/neoscroll.nvim',
+    config = function() require('neoscroll').setup() end
+  }
+
   use('luisiacc/gruvbox-baby')
   use {
     'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
@@ -32,7 +37,6 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   use('tpope/vim-surround')
   use('tpope/vim-repeat')
-  use('tpope/vim-commentary')
 
   use {
     'VonHeikemen/lsp-zero.nvim',
