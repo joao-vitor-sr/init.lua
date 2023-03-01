@@ -1,6 +1,6 @@
 require("jvsr.set")
 require("jvsr.remap")
-require("jvsr.packer")
+require("jvsr.lazy")
 
 local augroup = vim.api.nvim_create_augroup
 local jvsrGroup = augroup('jvsr', {})
