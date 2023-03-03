@@ -155,7 +155,6 @@ cmp.setup({
 
     -- confirm selection
     ['<C-y>'] = cmp.mapping.confirm({ select = false }),
-    ['<CR>'] = cmp.mapping.confirm({ select = false }),
 
     -- navigate items on the list
     ['<Up>'] = cmp.mapping.select_prev_item(select_opts),
