@@ -21,6 +21,26 @@ require("lazy").setup({
     event = "VeryLazy",
   },
   {
+    "nvim-neorg/neorg",
+    build = ":Neorg sync-parsers",
+    event = "VeryLazy",
+    opts = {
+      load = {
+            ["core.defaults"] = {},       -- Loads default behaviour
+            ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
+            ["core.norg.dirman"] = {      -- Manages Neorg workspaces
+          config = {
+            workspaces = {
+              notes = "~/dcs/notes",
+            },
+            default_workspace = "notes"
+          },
+        },
+      },
+    },
+    dependencies = { { "nvim-lua/plenary.nvim" } },
+  },
+  {
     "karb94/neoscroll.nvim",
     lazy = false,
     config = function()
@@ -93,7 +113,8 @@ require("lazy").setup({
       { "j-hui/fidget.nvim", opts = {} },
     },
   },
-  { -- Autocompletion
+  {
+    -- Autocompletion
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
