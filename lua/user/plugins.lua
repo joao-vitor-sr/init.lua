@@ -41,6 +41,15 @@ require("lazy").setup({
 
   { "kyazdani42/nvim-web-devicons", lazy = true },
   { "lewis6991/impatient.nvim" },
+
+  -- undotree
+  {
+    "mbbill/undotree",
+    lazy = true,
+    cmd = "UndotreeToggle",
+  },
+
+  -- whichkey
   {
     "folke/which-key.nvim",
     cmd = "WhichKey",
@@ -68,6 +77,7 @@ require("lazy").setup({
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     config = function()
+      require("user.none")
       -- Here is where you configure the autocompletion settings.
       local lsp_zero = require("lsp-zero")
       lsp_zero.extend_cmp()
@@ -153,6 +163,7 @@ require("lazy").setup({
       lsp_zero.configure("phpactor", {})
       lsp_zero.configure("rust_analyzer", {})
       lsp_zero.configure("tsserver", {})
+      lsp_zero.configure("texlab", {})
 
       lsp_zero.on_attach(function(client, bufnr) end)
     end,
