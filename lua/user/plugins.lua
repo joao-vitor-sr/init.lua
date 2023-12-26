@@ -164,6 +164,7 @@ require("lazy").setup({
       lsp_zero.configure("rust_analyzer", {})
       lsp_zero.configure("tsserver", {})
       lsp_zero.configure("texlab", {})
+      lsp_zero.configure("pylsp", {})
 
       lsp_zero.on_attach(function(client, bufnr) end)
     end,
